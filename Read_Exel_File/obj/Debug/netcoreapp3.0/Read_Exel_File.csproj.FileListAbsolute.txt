@@ -1,0 +1,13 @@
+C:\Users\billy.tukija\Documents\Repositories\GitHub\Contribuitions\BackEnd\CSharp\Read_Exel_File\Read_Exel_File\bin\Debug\netcoreapp3.0\Read_Exel_File.exe
+C:\Users\billy.tukija\Documents\Repositories\GitHub\Contribuitions\BackEnd\CSharp\Read_Exel_File\Read_Exel_File\obj\Debug\netcoreapp3.0\Read_Exel_File.AssemblyInfoInputs.cache
+C:\Users\billy.tukija\Documents\Repositories\GitHub\Contribuitions\BackEnd\CSharp\Read_Exel_File\Read_Exel_File\obj\Debug\netcoreapp3.0\Read_Exel_File.AssemblyInfo.cs
+C:\Users\billy.tukija\Documents\Repositories\GitHub\Contribuitions\BackEnd\CSharp\Read_Exel_File\Read_Exel_File\bin\Debug\netcoreapp3.0\Read_Exel_File.deps.json
+C:\Users\billy.tukija\Documents\Repositories\GitHub\Contribuitions\BackEnd\CSharp\Read_Exel_File\Read_Exel_File\bin\Debug\netcoreapp3.0\Read_Exel_File.runtimeconfig.json
+C:\Users\billy.tukija\Documents\Repositories\GitHub\Contribuitions\BackEnd\CSharp\Read_Exel_File\Read_Exel_File\bin\Debug\netcoreapp3.0\Read_Exel_File.runtimeconfig.dev.json
+C:\Users\billy.tukija\Documents\Repositories\GitHub\Contribuitions\BackEnd\CSharp\Read_Exel_File\Read_Exel_File\bin\Debug\netcoreapp3.0\Read_Exel_File.dll
+C:\Users\billy.tukija\Documents\Repositories\GitHub\Contribuitions\BackEnd\CSharp\Read_Exel_File\Read_Exel_File\bin\Debug\netcoreapp3.0\Read_Exel_File.pdb
+C:\Users\billy.tukija\Documents\Repositories\GitHub\Contribuitions\BackEnd\CSharp\Read_Exel_File\Read_Exel_File\bin\Debug\netcoreapp3.0\DocumentFormat.OpenXml.dll
+C:\Users\billy.tukija\Documents\Repositories\GitHub\Contribuitions\BackEnd\CSharp\Read_Exel_File\Read_Exel_File\bin\Debug\netcoreapp3.0\System.IO.Packaging.dll
+C:\Users\billy.tukija\Documents\Repositories\GitHub\Contribuitions\BackEnd\CSharp\Read_Exel_File\Read_Exel_File\obj\Debug\netcoreapp3.0\Read_Exel_File.csproj.CopyComplete
+C:\Users\billy.tukija\Documents\Repositories\GitHub\Contribuitions\BackEnd\CSharp\Read_Exel_File\Read_Exel_File\obj\Debug\netcoreapp3.0\Read_Exel_File.dll
+C:\Users\billy.tukija\Documents\Repositories\GitHub\Contribuitions\BackEnd\CSharp\Read_Exel_File\Read_Exel_File\obj\Debug\netcoreapp3.0\Read_Exel_File.pdb
