@@ -1,6 +1,8 @@
 ﻿using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Spreadsheet;
+using ExcelDataReader;
 using System;
+using System.IO;
 using System.Linq;
 using System.Text;
 
@@ -10,60 +12,35 @@ namespace Read_Exel_File
     {
         static void Main(string[] args)
         {
-            string strDoc = @"C:\myfile.xls";
+            string strDoc = @"C:\1579630636063342.xls";
 
-            using (SpreadsheetDocument doc = SpreadsheetDocument.Open(strDoc, false))
+            if (!strDoc.EndsWith(".xls"))
+                throw new Exception("Importa um arquivo xml");
+
+            System.Text.Encoding.RegisterProvider(System.Text.CodePagesEncodingProvider.Instance);
+            using (var stream = File.Open(strDoc, FileMode.Open, FileAccess.Read))
             {
-                WorkbookPart workbookPart = doc.WorkbookPart;
-                Sheets thesheetcollection = workbookPart.Workbook.GetFirstChild<Sheets>();
-                StringBuilder excelResult = new StringBuilder();
-
-                foreach (Sheet thesheet in thesheetcollection)
+                using (var reader = ExcelReaderFactory.CreateReader(stream))
                 {
-                    excelResult.AppendLine("Excel Sheet Name : " + thesheet.Name);
-                    excelResult.AppendLine("----------------------------------------------- ");
-                    
-                    Worksheet theWorksheet = ((WorksheetPart)workbookPart.GetPartById(thesheet.Id)).Worksheet;
-
-                    SheetData thesheetdata = (SheetData)theWorksheet.GetFirstChild<SheetData>();
-                    foreach (Row thecurrentrow in thesheetdata)
+                    do
                     {
-                        foreach (Cell thecurrentcell in thecurrentrow)
+                        var counter = 0;
+                        while (reader.Read()) //Each ROW
                         {
-                            string currentcellvalue = string.Empty;
-                            if (thecurrentcell.DataType != null)
+                            for (int column = 0; column < reader.FieldCount; column++)
                             {
-                                if (thecurrentcell.DataType == CellValues.SharedString)
-                                {
-                                    int id;
-                                    if (Int32.TryParse(thecurrentcell.InnerText, out id))
-                                    {
-                                        SharedStringItem item = workbookPart.SharedStringTablePart.SharedStringTable.Elements<SharedStringItem>().ElementAt(id);
-                                        if (item.Text != null)
-                                        {
-                                            excelResult.Append(item.Text.Text + " ");
-                                        }
-                                        else if (item.InnerText != null)
-                                        {
-                                            currentcellvalue = item.InnerText;
-                                        }
-                                        else if (item.InnerXml != null)
-                                        {
-                                            currentcellvalue = item.InnerXml;
-                                        }
-                                    }
-                                }
+                                //Console.WriteLine(reader.GetString(column));//Will blow up if the value is decimal etc. 
+                                Console.WriteLine(reader.GetValue(column));//Get Value returns object
+
                             }
-                            else
-                            {
-                                excelResult.Append(Convert.ToInt16(thecurrentcell.InnerText) + " ");
-                            }
+
+                            counter++;
+
+                            Console.WriteLine("Line " + counter);
+
                         }
-                        excelResult.AppendLine();
-                    }
-                    excelResult.Append("");
-                    Console.WriteLine(excelResult.ToString());
-                    Console.ReadLine();
+                    } while (reader.NextResult()); //Move to NEXT SHEET
+
                 }
             }
         }

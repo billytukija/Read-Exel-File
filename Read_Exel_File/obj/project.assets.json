@@ -2,6 +2,15 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v3.0": {
+      "ExcelDataReader/3.6.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/ExcelDataReader.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/ExcelDataReader.dll": {}
+        }
+      },
       "Microsoft.NETCore.Platforms/1.1.0": {
         "type": "package",
         "compile": {
@@ -1331,6 +1340,29 @@
     }
   },
   "libraries": {
+    "ExcelDataReader/3.6.0": {
+      "sha512": "eXyxTwG7EEWpgQX3juZ2KcndqTqm/ydx9GXS2lUiMJU54U4h5eXdygRtVgINv0t60ezPWEb+lL7uM7Q+wm5BBA==",
+      "type": "package",
+      "path": "exceldatareader/3.6.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "exceldatareader.3.6.0.nupkg.sha512",
+        "exceldatareader.nuspec",
+        "lib/net20/ExcelDataReader.dll",
+        "lib/net20/ExcelDataReader.pdb",
+        "lib/net20/ExcelDataReader.xml",
+        "lib/net45/ExcelDataReader.dll",
+        "lib/net45/ExcelDataReader.pdb",
+        "lib/net45/ExcelDataReader.xml",
+        "lib/netstandard1.3/ExcelDataReader.dll",
+        "lib/netstandard1.3/ExcelDataReader.pdb",
+        "lib/netstandard1.3/ExcelDataReader.xml",
+        "lib/netstandard2.0/ExcelDataReader.dll",
+        "lib/netstandard2.0/ExcelDataReader.pdb",
+        "lib/netstandard2.0/ExcelDataReader.xml"
+      ]
+    },
     "Microsoft.NETCore.Platforms/1.1.0": {
       "sha512": "kz0PEW2lhqygehI/d6XsPCQzD7ff7gUJaVGPVETX611eadGsA3A877GdSlU0LRVMCTH/+P3o2iDTak+S08V2+A==",
       "type": "package",
@@ -4917,6 +4949,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.0": [
+      "ExcelDataReader >= 3.6.0",
       "Open-XML-SDK >= 2.9.1"
     ]
   },
@@ -4928,11 +4961,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\billy.tukija\\Documents\\Repositories\\GitHub\\Contribuitions\\BackEnd\\CSharp\\Read_Exel_File\\Read_Exel_File\\Read_Exel_File.csproj",
+      "projectUniqueName": "C:\\Users\\billy.tukija\\Documents\\Repositories\\GitHub\\Contribuitions\\BackEnd\\CSharp\\Read-Exel-File\\Read_Exel_File\\Read_Exel_File.csproj",
       "projectName": "Read_Exel_File",
-      "projectPath": "C:\\Users\\billy.tukija\\Documents\\Repositories\\GitHub\\Contribuitions\\BackEnd\\CSharp\\Read_Exel_File\\Read_Exel_File\\Read_Exel_File.csproj",
+      "projectPath": "C:\\Users\\billy.tukija\\Documents\\Repositories\\GitHub\\Contribuitions\\BackEnd\\CSharp\\Read-Exel-File\\Read_Exel_File\\Read_Exel_File.csproj",
       "packagesPath": "C:\\Users\\billy.tukija\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\billy.tukija\\Documents\\Repositories\\GitHub\\Contribuitions\\BackEnd\\CSharp\\Read_Exel_File\\Read_Exel_File\\obj\\",
+      "outputPath": "C:\\Users\\billy.tukija\\Documents\\Repositories\\GitHub\\Contribuitions\\BackEnd\\CSharp\\Read-Exel-File\\Read_Exel_File\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -4964,6 +4997,10 @@
     "frameworks": {
       "netcoreapp3.0": {
         "dependencies": {
+          "ExcelDataReader": {
+            "target": "Package",
+            "version": "[3.6.0, )"
+          },
           "Open-XML-SDK": {
             "target": "Package",
             "version": "[2.9.1, )"
