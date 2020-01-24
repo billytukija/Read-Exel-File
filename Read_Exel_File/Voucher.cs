@@ -1,12 +1,8 @@
 ﻿namespace Read_Exel_File
 {
-    public class AfiliadoVoucher
+    public class Voucher
     {
-        public string Cnpj { get; set; }
-        public string Voucher { get; set; }
-        public string Status { get; set; }
-
-        public string TipoCertificacao { get; set; }
-        public string NumeroCertificadoDigital { get; set; }
+        public string Name { get; set; }
+        public string Company { get; set; }
     }
 }

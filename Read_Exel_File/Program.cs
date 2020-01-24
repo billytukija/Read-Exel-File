@@ -68,10 +68,8 @@ namespace Read_Exel_File
                     {
                         var voucher = new Voucher
                         {
-                            TipoCertificacao = worksheet.Cells[row, 1]?.Value.ToString(),
-                            Cnpj = "24061086000120",
-                            Voucher = worksheet.Cells[row, 2]?.Value.ToString(),
-                            NumeroCertificadoDigital = worksheet.Cells[row, 7]?.Value.ToString(),
+                            Name = worksheet.Cells[row, 2]?.Value.ToString(),
+                            Company = worksheet.Cells[row, 3]?.Value.ToString()
                         };
 
                         vouchers.Add(voucher);
