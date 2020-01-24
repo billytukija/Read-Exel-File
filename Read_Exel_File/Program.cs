@@ -1,10 +1,15 @@
 ﻿using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Spreadsheet;
 using ExcelDataReader;
+using Microsoft.AspNetCore.Http;
+using OfficeOpenXml;
 using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace Read_Exel_File
 {
@@ -43,6 +48,38 @@ namespace Read_Exel_File
 
                 }
             }
+        }
+
+        // This method takes a .xml file (IFormFile) uploaded, read it and populates a voucher list
+        public async Task<List<Voucher>> ValidarStatusAfiliadoVoucherAsync(IFormFile file, CancellationToken cancellationToken)
+        {
+            var vouchers = new List<Voucher>();
+
+            using (var stream = new MemoryStream())
+            {
+                await file.CopyToAsync(stream, cancellationToken);
+
+                using (var package = new ExcelPackage(stream))
+                {
+                    ExcelWorksheet worksheet = package.Workbook.Worksheets[0];
+                    var rowCount = worksheet.Dimension.Rows;
+
+                    for (int row = 2; row <= rowCount; row++)
+                    {
+                        var voucher = new Voucher
+                        {
+                            TipoCertificacao = worksheet.Cells[row, 1]?.Value.ToString(),
+                            Cnpj = "24061086000120",
+                            Voucher = worksheet.Cells[row, 2]?.Value.ToString(),
+                            NumeroCertificadoDigital = worksheet.Cells[row, 7]?.Value.ToString(),
+                        };
+
+                        vouchers.Add(voucher);
+                    }
+                }
+            }
+
+            return vouchers;
         }
     }
 }

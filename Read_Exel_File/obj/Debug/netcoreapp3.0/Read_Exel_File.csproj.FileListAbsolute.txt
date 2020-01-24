@@ -26,3 +26,7 @@ C:\Users\billy.tukija\Documents\Repositories\GitHub\Contribuitions\BackEnd\CShar
 C:\Users\billy.tukija\Documents\Repositories\GitHub\Contribuitions\BackEnd\CSharp\Read-Exel-File\Read_Exel_File\obj\Debug\netcoreapp3.0\Read_Exel_File.dll
 C:\Users\billy.tukija\Documents\Repositories\GitHub\Contribuitions\BackEnd\CSharp\Read-Exel-File\Read_Exel_File\obj\Debug\netcoreapp3.0\Read_Exel_File.pdb
 C:\Users\billy.tukija\Documents\Repositories\GitHub\Contribuitions\BackEnd\CSharp\Read-Exel-File\Read_Exel_File\bin\Debug\netcoreapp3.0\ExcelDataReader.dll
+C:\Users\billy.tukija\Documents\Repositories\GitHub\Contribuitions\BackEnd\CSharp\Read-Exel-File\Read_Exel_File\bin\Debug\netcoreapp3.0\Microsoft.AspNetCore.Http.Features.dll
+C:\Users\billy.tukija\Documents\Repositories\GitHub\Contribuitions\BackEnd\CSharp\Read-Exel-File\Read_Exel_File\bin\Debug\netcoreapp3.0\Microsoft.Extensions.Primitives.dll
+C:\Users\billy.tukija\Documents\Repositories\GitHub\Contribuitions\BackEnd\CSharp\Read-Exel-File\Read_Exel_File\bin\Debug\netcoreapp3.0\System.IO.Pipelines.dll
+C:\Users\billy.tukija\Documents\Repositories\GitHub\Contribuitions\BackEnd\CSharp\Read-Exel-File\Read_Exel_File\bin\Debug\netcoreapp3.0\System.Runtime.CompilerServices.Unsafe.dll
